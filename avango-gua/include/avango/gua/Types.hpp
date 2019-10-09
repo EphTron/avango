@@ -20,10 +20,8 @@ namespace gua
 {
 class TriMeshNode;
 class LineStripNode;
-class DynamicTriangleNode;
 class CubemapNode;
 class SkeletalAnimationNode;
-
 #if defined(AVANGO_VIDEO3D_SUPPORT)
 class Video3DNode;
 #endif
@@ -120,13 +118,10 @@ AV_GUA_DLL av::OutputStream& operator<<(OutputStream& os, const ::gua::TriMeshNo
 AV_GUA_DLL av::InputStream& operator>>(InputStream& is, ::gua::TriMeshNode&);
 AV_GUA_DLL av::OutputStream& operator<<(OutputStream& os, const ::gua::LineStripNode&);
 AV_GUA_DLL av::InputStream& operator>>(InputStream& is, ::gua::LineStripNode&);
-AV_GUA_DLL av::OutputStream& operator<<(OutputStream& os, const ::gua::DynamicTriangleNode&);
-AV_GUA_DLL av::InputStream& operator>>(InputStream& is, ::gua::DynamicTriangleNode&);
 AV_GUA_DLL av::OutputStream& operator<<(OutputStream& os, const ::gua::CubemapNode&);
 AV_GUA_DLL av::InputStream& operator>>(InputStream& is, ::gua::CubemapNode&);
 AV_GUA_DLL av::OutputStream& operator<<(OutputStream& os, const ::gua::SkeletalAnimationNode&);
 AV_GUA_DLL av::InputStream& operator>>(InputStream& is, ::gua::SkeletalAnimationNode&);
-
 #if defined(AVANGO_VIDEO3D_SUPPORT)
 AV_GUA_DLL av::OutputStream& operator<<(OutputStream& os, const ::gua::Video3DNode&);
 AV_GUA_DLL av::InputStream& operator>>(InputStream& is, ::gua::Video3DNode&);

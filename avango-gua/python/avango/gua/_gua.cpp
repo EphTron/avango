@@ -19,7 +19,6 @@
 #include "scenegraph/LODNode.hpp"
 #include "scenegraph/TriMeshNode.hpp"
 #include "scenegraph/LineStripNode.hpp"
-#include "scenegraph/DynamicTriangleNode.hpp"
 #include "scenegraph/Video3DNode.hpp"
 #include "scenegraph/SPointsNode.hpp"
 #include "scenegraph/DepthMapNode.hpp"
@@ -76,8 +75,6 @@
 #include "renderer/StencilPassDescription.hpp"
 #include "renderer/TriMeshPassDescription.hpp"
 #include "renderer/LineStripPassDescription.hpp"
-#include "renderer/DynamicTrianglePassDescription.hpp"
-#include "renderer/DepthMapPassDescription.hpp"
 #include "renderer/DepthMapPassDescription.hpp"
 #if defined(AVANGO_VIDEO3D_SUPPORT)
 #include "renderer/Video3DPassDescription.hpp"
@@ -105,7 +102,6 @@
 #include "renderer/Databases.hpp"
 #include "renderer/TriMeshLoader.hpp"
 #include "renderer/LineStripLoader.hpp"
-#include "renderer/DynamicTriangleLoader.hpp"
 #if defined(AVANGO_PBR_SUPPORT)
 #include "renderer/PBRLoader.hpp"
 #include "renderer/PLODLoader.hpp"
@@ -179,7 +175,6 @@ BOOST_PYTHON_MODULE(_gua)
 #endif
     init_TriMeshNode();
     init_LineStripNode();
-    init_DynamicTriangleNode();
     init_DepthMapNode();
 #if defined(AVANGO_VIDEO3D_SUPPORT)
     init_Video3DNode();
@@ -238,7 +233,6 @@ BOOST_PYTHON_MODULE(_gua)
     init_StencilPassDescription();
     init_TriMeshPassDescription();
     init_LineStripPassDescription();
-    init_DynamicTrianglePassDescription();
     init_DepthMapPassDescription();
 #if defined(AVANGO_VIDEO3D_SUPPORT)
     init_Video3DPassDescription();
@@ -266,12 +260,9 @@ BOOST_PYTHON_MODULE(_gua)
     init_Databases();
     init_TriMeshLoader();
     init_LineStripLoader();
-    init_DynamicTriangleLoader();
-
 #if defined(AVANGO_VIRTUAL_TEXTURING_SUPPORT)
     init_VTBackend();
 #endif
-
 #if defined(AVANGO_PBR_SUPPORT)
     init_PLODLoader();
     init_PLODPassDescription();
